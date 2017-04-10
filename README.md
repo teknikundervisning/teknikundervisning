@@ -1,1 +1,1 @@
-http://teknikundervisning.se/ - En undervisningsportal för teknikeleverna i Lycksele
+<a href="http://teknikundervisning.se/" target="_blank">teknikundervisning.se</a> - En undervisningsportal fÃ¶r teknikeleverna i Lycksele
