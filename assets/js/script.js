@@ -38,11 +38,6 @@ $(document).ready(function() {
         animation: "slide"
     });
     
-    // Lightgallery
-    $("#video-gallery").lightGallery({
-        videojs: true
-    });
-    
     // Accordion
     function close_accordion_section() {
 		jQuery('.accordion .accordion-section-title').removeClass('active');
