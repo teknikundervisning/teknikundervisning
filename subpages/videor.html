@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="sv-se">
+    <head>
+        <!-- meta tags -->
+        <meta charset="utf-8">
+        <meta name='keywords' content='teknikundervisning, teknikprogrammet, teknik, datorteknik, webbutveckling, gränssnittsdesign'>
+        <meta name="description" content="Teknikundervisning.se har jag skapat för att tillhandahålla en undervisningsportal för mina elever på Teknikprogrammet i Lycksele. När du som elev besöker denna sida ska du känna dig välkommen och få känslan av att jag, som pedagog, ger mitt allra yttersta för att erbjuda dig en värdig utbildning. ">
+        <meta name="author" content="Dennis Lundberg">
+        <meta name='reply-to' content='Dennis@teknikundervisning.se'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- title -->
+        <title>Videor</title>
+        
+        <!-- CSS - jQuery -->
+        <link rel="stylesheet" href="../assets/lib/css/jquery-ui.min.css" type="text/css" />
+        <link rel="stylesheet" href="../assets/lib/css/jquery-ui.structure.min.css" type="text/css" />
+        <link rel="stylesheet" href="../assets/lib/css/jquery-ui.theme.min.css" type="text/css" />
+        
+        <!-- CSS - Flexslider -->
+        <link rel="stylesheet" href="../assets/css/flexslider.css" type="text/css" />
+        
+        <!-- CSS - Lightgallery -->
+        <link rel="stylesheet" href="../assets/css/lightgallery.css" type="text/css" />
+        <link href="http://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
+        
+        <!-- CSS - My stylesheets -->
+        <link rel="stylesheet" href="../assets/css/main.css" type="text/css" />
+        <link rel="stylesheet" href="../assets/css/breakpoints.css" type="text/css" />
+        
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Share+Tech" rel="stylesheet" />
+        
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    </head>
+    
+    <body>
+        <a href="#" class="escape-arrow">&#8679;</a>
+        <div class="wrapper">
+            <!-- Include search-bar.html -->
+            <section class="login" data-include="login"></section>
+            
+            <!-- Include header.html -->
+            <header class="logo" data-include="header"></header>
+            
+            <main class="main-content main-videor">
+    			<section class="videor">
+    			    <h2>Webbutveckling</h2>
+    			    <!-- Hidden video div -->
+                    <div style="display:none;" id="video1">
+                        <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
+                            <source src="videos/video1.mp4" type="video/mp4">
+                             Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                    <div style="display:none;" id="video2">
+                        <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
+                            <source src="videos/video2.mp4" type="video/mp4">
+                             Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+
+                    <!-- data-src should not be provided when you use html5 videos -->
+                    <ul id="video-gallery">
+                      <li data-poster="video-poster1.jpg" data-sub-html="video caption1" data-html="#video1" >
+                          <img src="img/thumb1.jpg" />
+                      </li>
+                      <li data-poster="video-poster2.jpg" data-sub-html="video caption2" data-html="#video2" >
+                          <img src="img/thumb2.jpg" />
+                      </li>
+                    </ul>
+    			</section>
+    			<section class="videor">
+    			    <h2>Gränssnittsdesign</h2>
+    			</section>
+    			<section class="videor">
+    			    <h2>Datorteknik 1a</h2>
+    			</section>
+            </main>
+            
+            <!-- Include footer.html -->
+            <footer data-include="footer"></footer>
+        </div>
+        
+        <script type="text/javascript" src="../assets/lib/js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="../assets/lib/js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../assets/js/jquery.flexslider.js"></script>
+        <script type="text/javascript" src="../assets/js/script.js"></script>
+        
+        <!-- Lightgallery -->
+        <script type="text/javascript" src="../assets/lib/js/lightgallery.min.js"></script>
+        <script type="text/javascript" src="../assets/lib/js/lg-video.js"></script>
+        <script src="http://vjs.zencdn.net/4.12/video.js"></script>
+    </body>
+</html>

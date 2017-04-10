@@ -1,0 +1,616 @@
+@charset "utf-8";
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    
+    background-color: #e68246;
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+::selection {
+    background-color: #f0b490;
+}
+
+/**************************
+
+++++++ Escape arrow ++++++
+
+**************************/
+
+.escape-arrow {
+    display: none;
+    width: 32px;
+    height: 32px;
+    
+    position: fixed;
+    bottom: 0px;
+    right: 20px;
+    
+    background-color: #222;
+    color: #e68246;
+    text-decoration: none;
+    text-align: center;
+    font-size: 25px;
+    
+}
+
+/**************************
+
+++++++ Site Wrapper ++++++
+
+**************************/
+
+.wrapper {
+    width: 80%;
+    height: auto;
+    
+    margin: 0 auto 0 auto;
+    
+    /*border: 2px solid black;*/
+    /*border-top-left-radius: 4px;*/
+    /*border-top-right-radius: 4px;*/
+}
+
+/**************************
+
+++++++ Top Login Form ++++++
+
+**************************/
+
+.login {
+    display: flex;
+    justify-content: space-between;
+    /*width: 80%;*/
+    
+    background-color: #dedede;
+    
+    padding: 10px;
+    
+    border-bottom: 4px solid #cdcdcd;
+    
+    /*position: fixed;*/
+    /*z-index: 999;*/
+}
+
+.login-images {
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+    
+    border-radius: 3px;
+}
+
+.login-images a img {
+    transition: transform .5s;
+}
+
+.login-images a img:hover {
+    transform: rotateZ(20deg);
+}
+
+.login-form {
+    flex: 3;
+    height: 100%;
+    
+    display: flex;
+    align-items: center;
+}
+
+.login-form input[type="text"], .login-form input[type="password"]  {
+    flex: 1;
+    padding: 5px;
+}
+
+.login-form input[type="text"]:focus, .login-form input[type="password"]:focus  {
+    border: 1.5px solid orange;
+}
+
+.login-form input[type="text"], .login-form input[type="password"], .login-form input[type="submit"]  {
+    outline: none;
+    height: 70%;
+    margin-left: 10px;
+    
+    border:1px solid #aaa;
+    box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+    border-radius:2px;
+}
+
+.login-form input[type="submit"]  {
+    flex: 0.2;
+    color: #e68246;
+    font-weight: bold;
+    padding: 5px;
+    position: relative;
+}
+
+.login-form input[type="submit"]:hover {
+    border:1px solid #aaa;
+    box-shadow: 0px 0px 3px #eee, 0 10px 15px #ccc inset;
+    border-radius:2px;
+    
+    
+}
+
+.login-form input[type="submit"]:focus {
+    top: 1px;
+}
+
+::-webkit-input-placeholder {
+    color: #e68246;
+    font-weight: bold;
+}
+
+/**************************
+
+++++++ Logo + Main Nav ++++++
+
+**************************/
+
+.logo {
+    width: 100%;
+    height: auto;
+    
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    
+    background-color: #FFF;
+    border-bottom: 4px solid #cdcdcd;
+    
+    padding: 50px;
+}
+
+.main-headline {
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.main-headline h2 {
+    font-family: 'Share Tech', sans-serif;
+    font-size: 72px;
+    letter-spacing: 10px;
+    
+    /* Gradient on text */
+    background: -webkit-linear-gradient(right, #cdcdcd, #e68246);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    margin: 0;
+    padding: 0;
+    
+    -webkit-transition: font-size 1s;
+}
+
+/*
+.self-portrait img {
+    max-width: 100%;
+}
+*/
+.main-nav {
+    width: 70%;
+    -webkit-transition: width 1s;
+    
+    display: flex;
+    justify-content: center;
+    
+    border-bottom: 4px solid #cdcdcd;
+}
+
+.main-nav ul{
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    
+    list-style: none;
+    padding: 10px;
+}
+
+.main-nav li {
+    display: flex;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #787;
+    font-size: 20px;
+}
+
+.main-nav a:hover {
+    color: #e68246;
+    font-weight: bold;
+}
+
+.main-nav a.active {
+    color: #e68246;
+    font-weight: bold;
+}
+
+/**************************
+
+++++++ Image slider ++++++
+
+**************************/
+
+.image-slider {
+    width: 100%;
+    padding: 2%;
+    left: 0;
+    bottom: 0;
+    background-color: #dedede;
+    color: #787;
+    font-size: 14px;
+    line-height: 18px;
+    border-bottom: 4px solid #cdcdcd;
+}
+
+.flex-caption {
+  width: 100%;
+  padding: 2%;
+  left: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.5);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+/**************************
+
+++++++ Main Content ++++++
+
+**************************/
+
+.main-content {
+    width: 100%;
+    height: auto;
+    
+    padding: 2%;
+    
+    background-color: #FFF;
+    border-bottom: 4px solid #cdcdcd;
+}
+
+/* videor.html */
+.main-videor {
+    display: flex;
+}
+
+.videor {
+    width: 100%;
+    
+    color: #e68246;
+    text-align: center;
+    
+    margin: 0;
+    padding: 0;
+}
+
+/* ++++++ iFrame in contact.html ++++++ */
+
+.map iframe{
+	width:100%;
+	height:450px;
+	border:none;
+	overflow: hidden;
+}
+
+.scrolloff {
+    pointer-events: none;
+}
+
+.contact-map {
+    padding: 0;
+}
+
+/* ++++++ Contact form ++++++ */
+
+form#contactform input[type="text"] {
+  width: 100%;
+  border: 1px solid #f5f5f5;
+  min-height: 40px;
+  padding-left:20px;
+  font-size:13px;
+  padding-right:20px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+
+}
+
+form#contactform textarea {
+  border: 1px solid #f5f5f5;
+  resize: none;
+  width: 100%;
+  padding-left:20px;
+  padding-top:10px;
+  font-size:13px;
+  padding-right:20px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+
+}
+
+form#contactform .validation {
+	font-size:11px;
+}
+
+form#contactform input:focus, form#contactform textarea:focus {
+	outline: #e68246 1px solid;
+}
+
+.form-inputs {
+    display: flex;
+}
+
+#sendmessage {
+	border:1px solid #e6e6e6;
+	background:#f6f6f6;
+    color: #e68246;
+	display:none;
+	text-align:center;
+	padding:15px 12px 15px 65px;
+	margin:10px 0;
+	font-weight:600;
+	margin-bottom:30px;
+
+}
+
+#sendmessage.show,.show  {
+	display:block;
+}
+
+#contactform button {
+    padding: 6px 12px;
+    margin-bottom: 0;
+    margin-left: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-color: #eda77d;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    color: white;
+    outline: none;
+}
+
+#contactform button:hover {
+    background-color: #e68246;
+}
+
+/*----- Accordion -----*/
+.accordion, .accordion * {
+    -webkit-box-sizing:border-box; 
+    -moz-box-sizing:border-box; 
+    box-sizing:border-box;
+}
+ 
+.accordion {
+    overflow:hidden;
+    box-shadow:0px 1px 3px rgba(0,0,0,0.25);
+    border-radius:3px;
+    background:#f7f7f7;
+    margin-bottom: 5px;
+}
+
+.accordion:last-child {
+    margin-bottom: 0;
+}
+ 
+/*----- Section Titles -----*/
+.accordion-section-title {
+    width:100%;
+    padding:15px;
+    display:inline-block;
+    border-bottom:1px solid #1a1a1a;
+    background:#666;
+    transition:all linear 0.15s;
+    /* Type */
+    font-size:1.200em;
+    text-shadow:0px 1px 0px #1a1a1a;
+    color:#fff;
+    text-decoration:none;
+}
+ 
+.accordion-section-title.active, .accordion-section-title:hover {
+    background:#4c4c4c;
+    /* Type */
+}
+ 
+/*----- Section Content -----*/
+.accordion-section-content {
+    padding:15px;
+    display:none;
+}
+
+/*----- Accordion heading -----*/
+#accordion-1 .accordion-section-content-heading {
+    background-color: #24c46a;
+    color: white;
+    font-size:1.200em;
+    text-shadow:0px 1px 0px #1a1a1a;
+    
+    margin-bottom: 0;
+    padding: 10px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+#accordion-2 .accordion-section-content-heading {
+    background-color: #8246e6;
+    color: white;
+    font-size:1.200em;
+    text-shadow:0px 1px 0px #1a1a1a;
+    
+    margin-bottom: 0;
+    padding: 10px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+#accordion-3 .accordion-section-content-heading {
+    background-color: #e6465a;
+    color: white;
+    font-size:1.200em;
+    text-shadow:0px 1px 0px #1a1a1a;
+    
+    margin-bottom: 0;
+    padding: 10px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+#accordion-4 .accordion-section-content-heading {
+    background-color: #46aae6;
+    color: white;
+    font-size:1.200em;
+    text-shadow:0px 1px 0px #1a1a1a;
+    
+    margin-bottom: 0;
+    padding: 10px;
+    
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+/*----- Accordion ul-tasks -----*/
+.accordion-ul-tasks {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.accordion-ul-tasks li {
+    margin-bottom: 10px 0;
+    border-bottom: 1px solid black;
+}
+
+.accordion-ul-tasks a {
+    display: block;
+    color: #787;
+    text-decoration: none;
+    padding: 10px;
+    
+    transition: margin-left .4s;
+}
+
+#accordion-1 .accordion-ul-tasks li:hover {
+    background-color: #7bdba5;
+}
+#accordion-2 .accordion-ul-tasks li:hover {
+    background-color: #b490f0;
+}
+
+#accordion-3 .accordion-ul-tasks li:hover {
+    background-color: #f0909c;
+}
+
+#accordion-4 .accordion-ul-tasks li:hover {
+    background-color: #90ccf0;
+}
+
+.accordion-ul-tasks a:hover {
+    color: #ff0000;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.accordion-ul-tasks a:before {
+    content: "> ";
+}
+
+/*----- Accordion Toggle Classes for body background -----*/
+.body-background {
+    background-color: #e68246;
+}
+
+.webbutveckling-1-body-background {
+    background-color: #46e682;
+}
+
+.webbutveckling-2-body-background {
+    background-color: #8246e6;
+}
+
+.granssnittsdesign-body-background {
+    background-color: #e6465a;
+}
+
+.datorteknik-1a-body-background {
+    background-color: #46aae6;
+}
+
+/**************************
+
+++++++ Footer ++++++
+
+**************************/
+
+footer {
+    display: flex;
+    height: 1;
+    
+    background-color: #242424;
+}
+
+.footer-section {
+    flex: 1;
+    margin-right: 15px;
+}
+
+.footer-section:first-child {
+    margin-left: 15px;
+}
+
+.footer-section h5 {
+    margin: 10px 0 0 0px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    color: #fff;
+    border-bottom: 2px solid white;
+}
+
+.footer-section ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-section li {
+    padding: 5px 10px;
+}
+
+.footer-section li:last-child {
+    margin-bottom: 15px;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.footer-section a:before {
+    content: "> ";
+}

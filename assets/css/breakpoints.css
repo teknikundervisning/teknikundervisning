@@ -1,0 +1,17 @@
+@charset 'utf-8';
+
+@media all and (max-width: 1440px) {
+    .main-nav {
+        width: 80%;
+    }
+}
+
+@media all and (max-width: 1080px) {
+    .self-portrait h2 {
+        font-size: 52px;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+    }
+}
