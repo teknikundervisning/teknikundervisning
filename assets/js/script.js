@@ -92,4 +92,13 @@ $(document).ready(function() {
     $("#map_canvas1").mouseleave(function () {
         $('#map_canvas1').addClass('scrolloff'); // set the pointer events to none when mouse leaves the map area
     });
+    
+    document.getElementById('links').onclick = function (event) {
+    event = event || window.event;
+    var target = event.target || event.srcElement,
+        link = target.src ? target.parentNode : target,
+        options = {index: link, event: event},
+        links = this.getElementsByTagName('a');
+    blueimp.Gallery(links, options);
+};
 });

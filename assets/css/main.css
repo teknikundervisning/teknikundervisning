@@ -288,16 +288,34 @@ body {
 /* videor.html */
 .main-videor {
     display: flex;
+    flex-direction: column;
 }
 
 .videor {
     width: 100%;
     
     color: #e68246;
-    text-align: center;
     
     margin: 0;
     padding: 0;
+}
+
+.video-list {
+    width: 100%;
+    
+    list-style: none;
+}
+
+.video-list li {
+    border: 1px solid #cdcdcd;
+}
+
+.video-list li a {
+    display: block;
+    
+    padding: 5px;
+    
+    text-decoration: none;
 }
 
 /* ++++++ iFrame in contact.html ++++++ */
