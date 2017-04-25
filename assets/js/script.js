@@ -27,6 +27,16 @@ $(document).ready(function() {
         animation: "slide"
     });
     
+    // Lightgallery video
+    $('#video-gallery').lightGallery({
+        videojs: true
+    }); 
+    
+    //Fade in Play Button
+    $('.video-list li').on('mouseover', function() {
+       $('.gallery-poster-play-button img').toggleClass('play-button-toggle-opacity');
+    });
+    
     // Accordion
     function close_accordion_section() {
 		jQuery('.accordion .accordion-section-title').removeClass('active');

@@ -301,13 +301,24 @@ body {
 }
 
 .video-list {
-    width: 100%;
+    display: flex;
+    justify-content: flex-start;
     
     list-style: none;
 }
 
 .video-list li {
-    border: 1px solid #cdcdcd;
+    margin-right: 10px;
+    transition: all .3s;
+}
+
+.video-list li:hover {
+    transform: scale(0.98);
+    cursor: pointer;
+}
+
+.video-list li img {
+    border-radius: 4px;
 }
 
 .video-list li a {
@@ -316,6 +327,29 @@ body {
     padding: 5px;
     
     text-decoration: none;
+}
+
+.play-button {
+    position: relative;
+}
+.gallery-poster-play-button {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.gallery-poster-play-button img {
+    position: absolute;
+    left: 40%;
+    top: 35%;
+    vertical-align: middle;
+    opacity: .3;
+}
+
+.play-button-toggle-opacity {
+    opacity: 1;
 }
 
 /* ++++++ iFrame in contact.html ++++++ */

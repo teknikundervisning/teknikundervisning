@@ -27,6 +27,10 @@
         <link rel="stylesheet" href="../assets/css/main.css" type="text/css" />
         <link rel="stylesheet" href="../assets/css/breakpoints.css" type="text/css" />
         
+        <!-- CSS - Lightgallery -->
+        <link rel="stylesheet" href="../assets/data/node_modules/lightgallery/dist/css/lightgallery.css" type="text/css" />
+        <link href="http://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
+        
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Share+Tech" rel="stylesheet" />
@@ -46,13 +50,35 @@
             <header class="logo" data-include="subpages-header"></header>
             
             <main class="main-content main-videor">
+
     			<section class="videor">
     			    <h2>Webbutveckling</h2>
-    			    <ul class="video-list">
-    			        <li><a href="#"><i class="fa fa-video-camera"></i> First video</a></li>
-    			        <li><a href="#"><i class="fa fa-video-camera"></i> Second video</a></li>
-    			        <li><a href="#"><i class="fa fa-video-camera"></i> Third video</a></li>
-    			    </ul>
+    			    <!-- Hidden video div -->
+                    <div style="display:none;" id="video1">
+                        <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
+                            <source src="../assets/videos/video1.webm" type="video/mp4">
+                             Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                    <div style="display:none;" id="video2">
+                        <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
+                            <source src="../assets/videos/video1.webm" type="video/mp4">
+                             Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+
+                    <!-- data-src should not be provided when you use html5 videos -->
+                    <ul id="video-gallery" class="video-list">
+                      <li class="play-button" data-poster="../assets/videos/posters/video-poster-1.png" data-sub-html="video caption1" data-html="#video1" >
+                          <img src="../assets/videos/posters/video-poster-11.png" />
+                          <div class="gallery-poster-play-button">
+                              <img src="../assets/data/node_modules/lightgallery/dist/img/video-play.png" alt="">
+                          </div>
+                      </li>
+                      <li data-poster="../assets/videos/posters/video-poster-2.png" data-sub-html="video caption2" data-html="#video2" >
+                          <img src="../assets/videos/posters/video-poster-22.png" />
+                      </li>
+                    </ul>
     			</section>
     			<section class="videor">
     			    <h2>Gränssnittsdesign</h2>
@@ -76,9 +102,18 @@
             <footer data-include="footer"></footer>
         </div>
         
+        <!-- jQuery -->
         <script type="text/javascript" src="../assets/lib/js/jquery-3.1.1.min.js"></script>
         <script type="text/javascript" src="../assets/lib/js/jquery-ui.min.js"></script>
+        <!-- Flexslider -->
         <script type="text/javascript" src="../assets/js/jquery.flexslider.js"></script>
+        <!-- Lightgallery -->
+        <script type="text/javascript" src="../assets/data/node_modules/lightgallery/dist/js/lightgallery.min.js"></script>
+        <script type="text/javascript" src="../assets/data/node_modules/lg-thumbnail/dist/lg-thumbnail.min.js"></script>
+        <script type="text/javascript" src="../assets/data/node_modules/lg-fullscreen/dist/lg-fullscreen.min.js"></script>
+        <script type="text/javascript" src="../assets/data/node_modules/lg-video/dist/lg-video.min.js"></script>
+        <script src="http://vjs.zencdn.net/4.12/video.js"></script>
+        <!-- Own scripts -->
         <script type="text/javascript" src="../assets/js/script.js"></script>
     </body>
 </html>
