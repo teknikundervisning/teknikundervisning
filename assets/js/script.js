@@ -3,9 +3,7 @@ $(document).ready(function() {
 	var includes = $('[data-include]');
     jQuery.each(includes, function(){
       var file = '/includes/' + $(this).data('include') + '.html';
-      $(this).load(file);
-      console.info(file);
-      
+      $(this).load(file);      
     });
     
     // Escape arrow fadeIn - fadeOut on window scroll
@@ -23,15 +21,6 @@ $(document).ready(function() {
     		scrollTop: $('body').offset().top
     	}, 800);
     });
-    
-    // Slide down to Kurser - setTimeout() is used due to include HTML-loading time
-    setTimeout(function() {
-    	$('#kurser').on('click', function() {
-    		$('html, body').animate({
-    			scrollTop: $('.main-content').offset().top 
-    		}, 800);
-    	});
-    }, 800);
     
     // Flexslider
     $('.flexslider').flexslider({
