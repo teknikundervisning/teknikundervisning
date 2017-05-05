@@ -7,11 +7,30 @@
 }
 
 @media all and (max-width: 1080px) {
-    .self-portrait h2 {
+    .main-headline h2 {
         font-size: 52px;
     }
     
+    .main-nav {
+        width: 100%;
+    }
+}
+    
+@media all and (max-width: 850px) {
+    .login-images {
+        display: none;
+    }
+    
+    .main-headline h2 {
+        display: none;
+    }
+    
+    .main-headline .svg {
+        display: block;
+    }
+    
     .main-nav ul {
-        flex-direction: column;
+        flex-flow: column nowrap;
+        align-items: center;
     }
 }

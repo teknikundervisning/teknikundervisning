@@ -195,6 +195,10 @@ body {
     -webkit-transition: font-size 1s;
 }
 
+.main-headline .svg {
+    display: none;
+}
+
 /*
 .self-portrait img {
     max-width: 100%;
@@ -237,6 +241,21 @@ body {
 .main-nav a.active {
     color: #e68246;
     font-weight: bold;
+}
+
+.social-icons-phone-size {
+    display: flex;
+    justify-content: space-around;
+    
+    width: 100%;
+    
+    margin-top: 10px;
+    
+    transition: transform .5s;
+}
+
+.social-icons-phone-size a img:hover {
+    transform: rotateZ(20deg);
 }
 
 /**************************
