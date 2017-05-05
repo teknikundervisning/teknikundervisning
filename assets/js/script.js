@@ -28,13 +28,8 @@ $(document).ready(function() {
     });
     
     // Lightgallery video
-    $('#video-gallery').lightGallery({
-        videojs: true
-    }); 
-    
-    //Fade in Play Button
-    $('.video-list li').on('mouseover', function() {
-       $('.gallery-poster-play-button img').toggleClass('play-button-toggle-opacity');
+    $('.video-gallery').lightGallery({
+       videojs: true 
     });
     
     // Accordion

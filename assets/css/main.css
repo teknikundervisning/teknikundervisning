@@ -302,6 +302,7 @@ body {
 
 .video-list {
     display: flex;
+    flex-flow: row wrap;
     justify-content: flex-start;
     
     list-style: none;
@@ -346,9 +347,11 @@ body {
     top: 35%;
     vertical-align: middle;
     opacity: .3;
+    
+    transition: opacity .8s;
 }
 
-.play-button-toggle-opacity {
+.gallery-poster-play-button:hover img {
     opacity: 1;
 }
 
