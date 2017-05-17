@@ -211,7 +211,7 @@ body {
     display: flex;
     justify-content: center;
     
-    border-bottom: 4px solid #cdcdcd;
+/*    border-bottom: 4px solid #cdcdcd;*/
 }
 
 .main-nav ul{
@@ -568,6 +568,19 @@ form#contactform input:focus, form#contactform textarea:focus {
     border-top-right-radius: 4px;
 }
 
+#accordion-5 .accordion-section-content-heading {
+    background-color: #aaa;
+    color: white;
+    font-size:1.200em;
+    text-shadow:0px 1px 0px #1a1a1a;
+    
+    margin-bottom: 0;
+    padding: 10px;
+    
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
 /*----- Accordion ul-tasks -----*/
 .accordion-ul-tasks {
     padding: 0;
@@ -604,6 +617,10 @@ form#contactform input:focus, form#contactform textarea:focus {
     background-color: #90ccf0;
 }
 
+#accordion-5 .accordion-ul-tasks li:hover {
+    background-color: #aaa;
+}
+
 .accordion-ul-tasks a:hover i {
     color: #e68246;
 }
@@ -632,6 +649,10 @@ form#contactform input:focus, form#contactform textarea:focus {
 
 .datorteknik-1a-body-background {
     background-color: #46aae6;
+}
+
+.teknik-1-body-background {
+    background-color: #eee;
 }
 
 /**************************

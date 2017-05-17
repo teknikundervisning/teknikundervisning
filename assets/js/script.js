@@ -60,23 +60,28 @@ $(document).ready(function() {
 	$('.accordion').on('click', function() {
 		if($(this).is('.accordion-section-webbutveckling-1')){
 			$('body').toggleClass('webbutveckling-1-body-background', 1000);
-			$('body').removeClass('webbutveckling-2-body-background granssnittsdesign-body-background datorteknik-1a-body-background', 1000);
+			$('body').removeClass('webbutveckling-2-body-background granssnittsdesign-body-background datorteknik-1a-body-background teknik-1-body-background', 1000);
 				
 		} else if($(this).is('.accordion-section-webbutveckling-2')){
 			$('body').toggleClass('webbutveckling-2-body-background', 1000);
-			$('body').removeClass('webbutveckling-1-body-background granssnittsdesign-body-background datorteknik-1a-body-background', 1000);
-				
+			$('body').removeClass('webbutveckling-1-body-background granssnittsdesign-body-background datorteknik-1a-body-background teknik-1-body-background', 1000);
+            
 		} else if($(this).is('.accordion-section-granssnittsdesign')){
 			$('body').toggleClass('granssnittsdesign-body-background', 1000);
-			$('body').removeClass('webbutveckling-1-body-background webbutveckling-2-body-background datorteknik-1a-body-background', 1000);
+			$('body').removeClass('webbutveckling-1-body-background webbutveckling-2-body-background datorteknik-1a-body-background teknik-1-body-background', 1000);
+            
 		} else if($(this).is('.accordion-section-datorteknik-1a')){
 			$('body').toggleClass('datorteknik-1a-body-background', 1000);
-			$('body').removeClass('webbutveckling-1-body-background webbutveckling-2-body-background granssnittsdesign-body-background', 1000);
+			$('body').removeClass('webbutveckling-1-body-background webbutveckling-2-body-background granssnittsdesign-body-background teknik-1-body-background', 1000);
+            
+		} else if($(this).is('.accordion-section-teknik-1')){
+			$('body').toggleClass('teknik-1-body-background', 1000);
+			$('body').removeClass('webbutveckling-1-body-background webbutveckling-2-body-background granssnittsdesign-body-background datorteknik-1a-body-background', 1000);
 		}
 	});
 	
-		// Disable zoom function on google map in contact
-		// Enable the pointer events only on click
+    // Disable zoom function on google map in contact
+    // Enable the pointer events only on click
     $('#map_canvas1').addClass('scrolloff'); // set the pointer events to none on doc ready
     $('#canvas1').on('click', function () {
         $('#map_canvas1').removeClass('scrolloff'); // set the pointer events true on click

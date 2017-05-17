@@ -7,7 +7,7 @@
         <meta name="description" content="Teknikundervisning.se har jag skapat för att tillhandahålla en undervisningsportal för mina elever på Teknikprogrammet i Lycksele. När du som elev besöker denna sida ska du känna dig välkommen och få känslan av att jag, som pedagog, ger mitt allra yttersta för att erbjuda dig en värdig utbildning. ">
         <meta name="author" content="Dennis Lundberg">
         <meta name='reply-to' content='Dennis@teknikundervisning.se'>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
         
         <!-- title -->
         <title>Teknikundervisning</title>
@@ -39,18 +39,11 @@
     <body>
         <a href="#" class="escape-arrow">&#8679;</a>
         <div class="wrapper">
-            <!-- Include search-bar.html -->
+            <!-- Include login.html -->
             <section class="login" data-include="login"></section>
             
-            <!-- Include header.html -->
-            <header class="logo" data-include="index-header">
-                <div class="social-icons-phone-size">
-                    <a href="https://www.facebook.com/teknikundervisning" target="_blank"><img title="Facebook" src="https://maxcdn.icons8.com/iOS7/PNG/25/Social_Networks/facebook-25.png" title="Facebook" width="25"></a>
-                    <a href="/subpages/contact.html#contactform" target="_blank"><img title="E-mail" src="https://maxcdn.icons8.com/iOS7/PNG/25/Messaging/message-25.png" title="Message" width="25"></a>
-                    <a href="https://www.pinterest.se/tekundervisning/" target="_blank"><img title="Pinterest" class="icon icons8-Pinterest" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAFQklEQVRoQ8WajbUMQRCF60WACBABIkAEiAARIAJEgAgQASJABIiAFwEi4Hxz5u6529s9Xd37Hn3OnLf7pqerbv3cqu7Zkzi7cSUibkbE9fXiO5ePHxHB9XW9Pq/fj9bi5MgVUPR+RDyoKJ1dGmAvI+LDMaBmgQDg6QpACv+OiE+rpfkr6zsgeenW6jX+XrAJbyLi+QygUSAXI+JFAeBtRLxfr6wXfN7diODCsxoAehIRv7ILjgBB2OuIAAzWJxy40sI6SuEtQvTx6iXWfZg1UBYIXkAAg1jmM6FzHgNAeATiYGAsvLM5ekCw/ruIIJbxAgAQ8i8G3gEEOUTO3dvy/hYQQHxckxIQgIE2/+WAygEBGGTfboHZAgIIlP+2JuN5hVLPMIAhCq6t+YJnDkYLCC59tIYTC/0vEFLYPfPK8nUHqAYEdiIvziKclLAkMCzEdTppGAeDV6D8JhDy4vtKsVDfTGJTD1QbWmGDh4n90eIHAVACMMhVz5fSIyiOIlAsyowMnns20apgWYyWrUcYAE9TiAG2DAeC+/EGITWSF7Vq7wagMfRY95ZE/wcEjJRhRfRkHuvglSV/HYi8gbuxbGY4Rft8rAVh1BTDSFgSMvExAgb96PV2XhEQeYOFLw24GVLwEISqUTJjWU9e98xe7Des6fouXhGQA4QJd1DlaV00AEHdycY6zwHmSyGrSq8VfRRBtC8vBYTcAOUBrTUAObsxpUXVJKXnSG05GdHvZaJCZYIcuQoQT3IUzAzRoOaWecV9vKX1tgzkYaL1stSP95ekB4iUGqFcKPOOIXYL1hRbrLZhIe5ftvtZwpEeDwGidiT7MPL+mFBCh9zQUOyWem/1daoNeiZrVIXlKxbXIvA4nzPDgZTJSfKSxMcAKY3T0gkD0tx+BogSfVdcEkgcSOlJv6eleor9tHzimd58rSvWW+hXgnubLMe35ZEy3nmuF7Yl+N78A11mgVDw2B8w+HzDVi6JgFvcbxVJ0agrt9SGRGTs8nUWiAhCsjy/ykJJjdmi9XKtHvAS3+LNWSAlxTq9lqy116VWrFzmRw94E4hieiTZWcwt78JL1tqK97KwZvLJgcigp7P0q8UERrxPCGFhH63eqWxz9MyIQffod6YgllbRNraWuLX2vNX+jyQ5OuwVxJkWpUUotcRlLmDIHf4CApklAWRrh8vea1EUZwihZzpmlPlB7tR2hKWMHiG0dBJRLE0jQwmfbeNbC5eFDcNgNZ2mlM8BlPDI1gx/XmHMqcwVAVHSzloGAUo8CfNQ0amKXvzoFAWQIxsxB1LdWB1sHSfiq9wgjbQZo+KaW10Wmjl8cAXKVnykmx4FIlI5OHxgIU96eqPRY1J10VJqpAkdAYKekAqsVz0Ocq8Qu9XD4g2JnujZjdEIAM3V4XrzgI6JoMQTUGZ23ywBDuS8wkqkBNvpPHmRv3WIPXJgxloCMlPYMp5hE4U3MHb3EFsLKpkAk80XARnplTIAmOMg0q8VtLhYiA0RFuglP/dhvuxx6wgITuAB08y93qs3wLATzIQZRW/vnUVW04157onNk8weRRKPajEAQ3c6885kBhOH3HgXHfAEjWazC+gBKXOG73gJRuuF2ozyqmeEks7KUmfBWSAIIHTwBtSMZSAEuPysAOl3LcoxKBYvpMJ1BIjqDADKn1sgDPfPDI5eMdLu7dNqIGpGuqEcBSJFsR6Wc0AI9R/V1F568hxnvP6jGt9g4WHWHfbyLBAHhDWxnh9Cj3gGwHgZrw4DkKBjgbjCWFuWhjZlfZ8jL+mHZ/o51Ajw6ty/T7R2nXkYekIAAAAASUVORK5CYII=" width="25" height="25"></a>
-                    <a href="https://codepen.io/DennisLundberg/" target="_blank"><img title="CodePen" class="icon icons8-CodePen" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAE5ElEQVRoQ+2Z4bENQRCF+0VABoiADBABIkAEiAARIAJE4IkAGRABMiAC6quao46+M7Mzu3tRt8yfd+/b2Zk+fbpP98w9ixMZZyeCI/4DGWTyRkS8LHPvR8T7wfempx2LkYsR8TgiHiaLnkfE04j4Nm3pwgvHAHK7sAAYBoYzAMYABOyc7wlmTyCXI+JZRACE8SEi7kXEl/L9WkTAyPXyHSCP7PkmXHsBeRARTyICFr6XzxhdG4Qbcy8Udvj8YhOKiM2qhZdhgaRmvC0sED7KE7zOYJ7yg2evIuJWeYYIMO/jWkBbGCHm8Sbja0lsxb3UinDTHj9KGLl6EYYwd6msw3rKqSlMa4C4kWxGWGCAWEBulSc8dyAyDsAA0ju8T3gyyKlpqZ4BkiX1U2FBteFu8a7yhByoASGHlB/ky+syDwfBztXyfUqqR4HUJFVhRfjAgvJEavW5AeRKyQ+pF46AAakb605L9RKQJUlV0RMLyK3yhJyoMaI9cQ4JL3bEAO+wL8+GpboHpCepqBUs8JdBeBAmXrGXgPAeDgAAYclAtWBH6jUs1TUg2ciapKr1QK1godZDjQBR8hOWMCD18vwYkuoMZFRSMQCZZMNW3zQDROzgIOVHVq+uVGcg2rwnqagVLLSKV1a3LL9LakREwI7UqyfVv+xvAfH/4xlRTgjd7FSqXGNgTermajRSK96ZEuI81hb7me2DFuVgQklIbyfcQ47Jw7LFWvZ2rZLDqBdVz1HtNw2EuJScZrlUK57FwVnQMwxwNXJ2XKm8XlE4Xc7dlmkgvOAMZH0n1FQIUTA2U+44Q/KkMwBI1vaw9aLKWrntyfk2nCNCzoJ3TGZd3zHSxSEzpBZdvRRAWYs8IYy8z8pHAIC9KfN6xXUxRwREHnXFwWCM4H+qI15Ec43xWoFj/BzCMzkHoK2j8mZGiHvXdzzq8pv7LWfIBSFX8txnMRcHwQJrMjincJbZhRF5Sz0V8evVPMc781unvlx0Pa8wNouKWN8FiLya2xU8hcEKB4/37O0eaziCsMT7SnCXfO2/ObRqUojWw1At3lEjdbV+1K0x6nmVb1icnc2MZBa8WJHQLp86V+RGr8ZoZsjXym2J2FnNCAWJRRS7YsFlslUoPd75nIubr6VnuW33+y+e6WZmuiCqKyUX2IyR76s0p9XGSH1UN5baj1x0a03mKiAksjrRpabRPZobQy9uS3dfOCc3jTrE8WwYSO9gk09xXif4nD2a47rGqK8xc7Brtii51UZx/K7KT3GqzHserKRgAMudAblIiCtUvTmt3jTW7mjX3EHNnBBn7spglBD+7WDXu3zoHfzzuQKmVMwUJiNAkGkXknyOGb5THrkOIl/8jjbfQQFYxc/lcglIPnuwT+uujFrGPrr7ynk5fImdK6yfK2pnFAD1LuhqF3oy0nux3FEcAMi9S3OCPchnB2KUcFLzSJ3Bq2JHP/Rk1VIvhZF4WQWXPCHMJLOtDrpq61Jo1V6auYOq9Uf8b+1d2S6M5EVGpdoZmZLUkTBZE1q1dUekWreSSmZCq3anfCCpfxKI9hq+oy3njtGf6YaxrMmR1uJ4OUu1/5xW+5muK6nDKHb4DbG2V02qmacaMSypfxuI2no/9sqmKUn9F4DIBkk131s/P8zYexT53cWAvRbZM9n3smnVOicD5CfcYvFCXWeF/gAAAABJRU5ErkJggg==" width="25" height="25"></a>
-                </div>
-            </header>
+            <!-- Include index-header.html -->
+            <header class="logo" data-include="index-header"></header>
             
             <section class="image-slider">
                 <div class="flexslider">
@@ -72,7 +65,7 @@
             </section>
 
             <main class="main-content">
-                <h2>Kursupplägg</h2>
+                <h2 id="kursupplagg">Kursupplägg</h2>
                 <section class="accordion accordion-section-webbutveckling-1">
                     <section class="accordion-section">
                         <a class="accordion-section-title" href="#accordion-1">Webbutveckling 1</a>
@@ -226,6 +219,33 @@
                             <h2 class="accordion-section-content-heading">Datasäkerhet</h2>
                             <ul class="accordion-ul-tasks">
                                 <li><a href="" target="_blank">Uppgift: Breakpoints</a></li>
+                            </ul>
+                        </section> <!--end .accordion-section-content-->
+                    </section> <!--end .accordion-section-->
+                </section> <!--end .accordion-->
+                
+                <section class="accordion accordion-section-teknik-1">
+                    <section class="accordion-section">
+                        <a class="accordion-section-title" href="#accordion-5">Teknik 1</a>
+                         
+                        <section id="accordion-5" class="accordion-section-content">
+                            <h2 class="accordion-section-content-heading">Introduktion</h2>
+                            <ul class="accordion-ul-tasks">
+                                <li><a href="https://www.skolverket.se/laroplaner-amnen-och-kurser/gymnasieutbildning/gymnasieskola/sok-amnen-kurser-och-program/subject.htm?lang=sv&subjectCode=tek&tos=gy" target="_blank">Länk till skolverket - Teknik 1</a></li>
+                            </ul>
+                            
+                            <h2 class="accordion-section-content-heading">Digital Kommunikation</h2>
+                            <ul class="accordion-ul-tasks">
+                                <li><a href="https://drive.google.com/drive/folders/0B6N1i0yFUgJhRUtxaW13bTZNb0E?usp=sharing" target="_blank">Länk till aktuella webbprojekt</a></li>
+                                <li><a href="https://docs.google.com/document/d/1KBp1_pGDUz6oRSzHX0j8hIdtUzN_WH4voMwed0r1ESo/edit?usp=sharing" target="_blank">Uppgift: Digital kommunikation - Webbplats</a></li>
+                                <li><a href="http://www.samarbeta.se/mod/assign/view.php?id=168761" target="_blank">Inlämning: Digital kommunikation - Webbplats</a></li>
+                                <li><a href="https://docs.google.com/document/d/17sreUh-JhdIbzbfFbDV444HfpljO6tYQrk9bdNCGOXw/edit?usp=sharing" target="_blank">Uppgift: Digital kommunikation - Presentation</a></li>
+                                <li><a href="http://www.samarbeta.se/mod/assign/view.php?id=172584" target="_blank">Inlämning: Digital kommunikation - Presentation</a></li>
+                                <li><a href="http://prezi.com/-iachzsa9sdw/?utm_campaign=share&utm_medium=copy&rc=ex0share" target="_blank">Föreläsning: Webbens historia</a></li>
+                                <li><a href="https://drive.google.com/file/d/0B6N1i0yFUgJhN3JrZUQ1VGI5VGM/view?usp=sharing" target="_blank">Historia kring HTML och CSS --- Läs hemma!</a></li>
+                                <li><a href="https://drive.google.com/file/d/0B6N1i0yFUgJhbEltbDFIX09vSlk/view?usp=sharing" target="_blank">Föreläsning: HTML5</a></li>
+                                <li><a href="https://drive.google.com/file/d/0B6N1i0yFUgJhY3RNREhqS0hHemc/view?usp=sharing" target="_blank">Föreläsning: CSS3</a></li>
+                                
                             </ul>
                         </section> <!--end .accordion-section-content-->
                     </section> <!--end .accordion-section-->

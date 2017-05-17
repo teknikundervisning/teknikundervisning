@@ -17,6 +17,14 @@
 }
     
 @media all and (max-width: 850px) {
+    .wrapper {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        
+        margin: 0;
+    }
+    
     .login-images {
         display: none;
     }
@@ -25,12 +33,71 @@
         display: none;
     }
     
-    .main-headline .svg {
-        display: block;
-    }
-    
     .main-nav ul {
         flex-flow: column nowrap;
         align-items: center;
+    }
+    
+    .login {
+        order: 1;
+    }
+    
+    .login-form {
+        flex-flow: column nowrap;
+    }
+    
+    .login-form input[type="text"], .login-form input[type="password"] {
+        width: 100%;
+    }
+    
+    .login-form input[type="submit"] {
+        width: 100%;
+    }
+    
+    .logo {
+        order: 3;
+    }
+    
+    .image-slider {
+        order: 2;
+        width: 100%;
+        padding: 2%;
+        left: 0;
+        bottom: 0;
+        background-color: #dedede;
+        color: #787;
+        font-size: 14px;
+        line-height: 18px;
+        border-bottom: 4px solid #cdcdcd;
+    }
+    
+    .flexslider {
+        margin-bottom: 0;
+    }
+    
+    .flex-caption {
+      display: none;
+    }
+    
+    .flex-control-paging li a {
+        display: none;
+    }
+    
+    .main-content {
+        order: 4;
+    }
+    
+    footer {
+        order: 5;
+        flex-flow: column nowrap;
+    }
+
+    .footer-section {
+        display: none;
+    }
+    
+    .footer-section:first-child {
+        display: block;
+        margin: 0;
     }
 }
