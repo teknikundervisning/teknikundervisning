@@ -604,14 +604,13 @@ form#contactform input:focus, form#contactform textarea:focus {
     background-color: #90ccf0;
 }
 
-.accordion-ul-tasks a:hover {
-    color: #ff0000;
-    font-weight: bold;
-    margin-left: 10px;
+.accordion-ul-tasks a:hover i {
+    color: #e68246;
 }
 
-.accordion-ul-tasks a:before {
-    content: "> ";
+.accordion-ul-tasks a:hover {
+    color: #fff;
+    margin-left: 7px;
 }
 
 /*----- Accordion Toggle Classes for body background -----*/
