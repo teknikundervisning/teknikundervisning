@@ -1,22 +1,14 @@
 $(document).ready(function() {
     
-    // Disable zoom function on google map in contact
-    // Enable the pointer events only on click
-    $('#map_canvas1').addClass('scrolloff'); // set the pointer events to none on doc ready
-    $('#canvas1').on('click', function () {
-        $('#map_canvas1').removeClass('scrolloff'); // set the pointer events true on click
-    });
-
-    // Disable pointer events when the mouse leave the canvas area
-    $("#map_canvas1").mouseleave(function () {
-        $('#map_canvas1').addClass('scrolloff'); // set the pointer events to none when mouse leaves the map area
-    });
 	//Included HTML-files
 	var includes = $('[data-include]');
     jQuery.each(includes, function(){
       var file = '/includes/' + $(this).data('include') + '.html';
       $(this).load(file);      
     });
+    
+    // jQuery tabs method
+    $('#tabs').tabs();
     
     // Escape arrow fadeIn - fadeOut on window scroll
     $(window).scroll(function() {
@@ -43,53 +35,5 @@ $(document).ready(function() {
     $('.video-gallery').lightGallery({
        videojs: true 
     });
-    
-    // Accordion
-    function close_accordion_section() {
-		jQuery('.accordion .accordion-section-title').removeClass('active');
-		jQuery('.accordion .accordion-section-content').slideUp(300).removeClass('open');
-	}
 
-	jQuery('.accordion-section-title').click(function(e) {
-		// Grab current anchor value
-		var currentAttrValue = jQuery(this).attr('href');
-
-		if(jQuery(e.target).is('.active')) {
-			close_accordion_section();
-		}else {
-			close_accordion_section();
-
-			// Add active class to section title
-			jQuery(this).addClass('active');
-			// Open up the hidden content panel
-			jQuery('.accordion ' + currentAttrValue).slideDown(300).addClass('open'); 
-		}
-
-		e.preventDefault();
-	}); // End of accordion function
-	
-	// Body background-color function
-	$('.accordion').on('click', function() {
-		if($(this).is('.accordion-section-webbutveckling-1')){
-			$('body').toggleClass('webbutveckling-1-body-background', 1000);
-			$('body').removeClass('webbutveckling-2-body-background granssnittsdesign-body-background datorteknik-1a-body-background teknik-1-body-background', 1000);
-				
-		} else if($(this).is('.accordion-section-webbutveckling-2')){
-			$('body').toggleClass('webbutveckling-2-body-background', 1000);
-			$('body').removeClass('webbutveckling-1-body-background granssnittsdesign-body-background datorteknik-1a-body-background teknik-1-body-background', 1000);
-            
-		} else if($(this).is('.accordion-section-granssnittsdesign')){
-			$('body').toggleClass('granssnittsdesign-body-background', 1000);
-			$('body').removeClass('webbutveckling-1-body-background webbutveckling-2-body-background datorteknik-1a-body-background teknik-1-body-background', 1000);
-            
-		} else if($(this).is('.accordion-section-datorteknik-1a')){
-			$('body').toggleClass('datorteknik-1a-body-background', 1000);
-			$('body').removeClass('webbutveckling-1-body-background webbutveckling-2-body-background granssnittsdesign-body-background teknik-1-body-background', 1000);
-            
-		} else if($(this).is('.accordion-section-teknik-1')){
-			$('body').toggleClass('teknik-1-body-background', 1000);
-			$('body').removeClass('webbutveckling-1-body-background webbutveckling-2-body-background granssnittsdesign-body-background datorteknik-1a-body-background', 1000);
-		}
-	}); // End Body background-color function
-    
 }); //End of document ready function
