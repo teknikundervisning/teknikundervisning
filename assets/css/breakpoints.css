@@ -1,11 +1,21 @@
 @charset 'utf-8';
 
+/**************************
+
+++++++ Desktop+ ++++++
+
+**************************/
 @media all and (max-width: 1440px) {
     .main-nav {
         width: 80%;
     }
 }
 
+/**************************
+
+++++++ Desktop ++++++
+
+**************************/
 @media all and (max-width: 1080px) {
     .main-headline h2 {
         font-size: 52px;
@@ -16,6 +26,12 @@
     }
 }
     
+/**************************
+
+++++++ Mobile version ++++++
+
+**************************/
+
 @media all and (max-width: 850px) {
     .wrapper {
         width: 100%;
@@ -37,6 +53,12 @@
         flex-flow: column nowrap;
         align-items: center;
     }
+
+/**************************
+
+++++++ Main order of elements in mobile version ++++++
+
+**************************/
     
     .login {
         order: 1;
@@ -86,6 +108,12 @@
     .main-content {
         order: 4;
     }
+
+/**************************
+
+++++++ Footer layout in mobile version ++++++
+
+**************************/
     
     footer {
         order: 5;
@@ -99,5 +127,21 @@
     .footer-section:first-child {
         display: block;
         margin: 0;
+    }
+    
+/**************************
+
+++++++ Contact.html ++++++
+
+**************************/
+    
+/* +++ form inputs in mobile version +++ */
+    .form-inputs {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    
+    #contactform button {
+        background-color: #e68246;    
     }
 }

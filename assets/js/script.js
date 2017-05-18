@@ -1,4 +1,16 @@
 $(document).ready(function() {
+    
+    // Disable zoom function on google map in contact
+    // Enable the pointer events only on click
+    $('#map_canvas1').addClass('scrolloff'); // set the pointer events to none on doc ready
+    $('#canvas1').on('click', function () {
+        $('#map_canvas1').removeClass('scrolloff'); // set the pointer events true on click
+    });
+
+    // Disable pointer events when the mouse leave the canvas area
+    $("#map_canvas1").mouseleave(function () {
+        $('#map_canvas1').addClass('scrolloff'); // set the pointer events to none when mouse leaves the map area
+    });
 	//Included HTML-files
 	var includes = $('[data-include]');
     jQuery.each(includes, function(){
@@ -8,7 +20,7 @@ $(document).ready(function() {
     
     // Escape arrow fadeIn - fadeOut on window scroll
     $(window).scroll(function() {
-    	if($(this).scrollTop() > 0){
+    	if($(this).scrollTop() > 150){
     		$('.escape-arrow').fadeIn();
     	} else {
     		$('.escape-arrow').fadeOut();	
@@ -54,7 +66,7 @@ $(document).ready(function() {
 		}
 
 		e.preventDefault();
-	});
+	}); // End of accordion function
 	
 	// Body background-color function
 	$('.accordion').on('click', function() {
@@ -78,26 +90,6 @@ $(document).ready(function() {
 			$('body').toggleClass('teknik-1-body-background', 1000);
 			$('body').removeClass('webbutveckling-1-body-background webbutveckling-2-body-background granssnittsdesign-body-background datorteknik-1a-body-background', 1000);
 		}
-	});
-	
-    // Disable zoom function on google map in contact
-    // Enable the pointer events only on click
-    $('#map_canvas1').addClass('scrolloff'); // set the pointer events to none on doc ready
-    $('#canvas1').on('click', function () {
-        $('#map_canvas1').removeClass('scrolloff'); // set the pointer events true on click
-    });
-
-    // Disable pointer events when the mouse leave the canvas area
-    $("#map_canvas1").mouseleave(function () {
-        $('#map_canvas1').addClass('scrolloff'); // set the pointer events to none when mouse leaves the map area
-    });
+	}); // End Body background-color function
     
-    document.getElementById('links').onclick = function (event) {
-    event = event || window.event;
-    var target = event.target || event.srcElement,
-        link = target.src ? target.parentNode : target,
-        options = {index: link, event: event},
-        links = this.getElementsByTagName('a');
-    blueimp.Gallery(links, options);
-};
-});
+}); //End of document ready function
