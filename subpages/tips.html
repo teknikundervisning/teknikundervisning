@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
         
         <!-- title -->
-        <title>Tips o Trix</title>
+        <title>Teknikundervisning: Tips o Trix</title>
         
         <!-- CSS - jQuery -->
         <link rel="stylesheet" href="../assets/lib/css/jquery-ui.min.css" type="text/css" />
@@ -53,16 +53,55 @@
                         <li><a href="#tabs-4">Teknik 1</a></li>
                     </ul>
                     <section id="tabs-1">
-                        <p>Dessa sektioner kommer att fyllas på under tiden som kurserna utformas.</p>
+                       <p>Under denna sektion kan du finna tips på olika webbrelaterade ting samt få tillgång till vanligt använda kodexempel.</p>
+                        <section class="accordion">
+                            <section class="accordion-section">
+                               <a class="accordion-section-title accordion-tips" href="#accordion-6"><i class="fa fa-code"></i> Code Editors</a>
+                                <section id="accordion-6" class="accordion-section-content">
+                                    <ul class="accordion-ul-tasks-tips">
+                                        <li><a href="http://brackets.io/" target="_blank"><i class="fa fa-cog"></i> Brackets</a></li>
+                                        <li><a href="https://www.sublimetext.com/3" target="_blank"><i class="fa fa-cog"></i> Sublime Text 3</a></li>
+                                        <li><a href="https://atom.io/" target="_blank"><i class="fa fa-cog"></i> Atom</a></li>
+                                    </ul>
+                                </section> <!--end .accordion-section-content-->
+                                
+                                <a class="accordion-section-title accordion-tips" href="#accordion-7"><i class="fa fa-code"></i> HTML-Skelettet</a>
+                                <section id="accordion-7" class="accordion-section-tips accordion-section-content">
+                                    <p data-height="295" data-theme-id="0" data-slug-hash="ONoexB" data-default-tab="html,result" data-user="DennisLundberg" data-embed-version="2" data-pen-title="HTML-Skelettet" class="codepen">See the Pen <a href="https://codepen.io/DennisLundberg/pen/ONoexB/">HTML-Skelettet</a> by Dennis Lundberg (<a href="https://codepen.io/DennisLundberg">@DennisLundberg</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+                                    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+                                </section> <!--end .accordion-section-content-->
+                                
+                                <a class="accordion-section-title accordion-tips" href="#accordion-8"><i class="fa fa-code"></i> Ramverk</a>
+                                <section id="accordion-8" class="accordion-section-tips accordion-section-content">
+                                    <ul class="accordion-ul-tasks-tips">
+                                        <h4>HTML & CSS</h4>
+                                        <ul class="accordion-ul-tasks-tips">
+                                            <li><a href="http://getbootstrap.com/" target="_blank"><i class="fa fa-book"></i> Bootstrap</a></li>
+                                        </ul>
+                                        
+                                        <h4>Javascript</h4>
+                                        <ul class="accordion-ul-tasks-tips">
+                                            <li><a href="http://jquery.com/" target="_blank"><i class="fa fa-book"></i> jQuery</a></li>
+                                            <li><a href="http://jqueryui.com/" target="_blank"><i class="fa fa-book"></i> jQuery UI</a></li>
+                                        </ul>
+                                        
+                                        <h4>Server</h4>
+                                        <ul class="accordion-ul-tasks-tips">
+                                            <li><a href="https://nodejs.org/en/" target="_blank"><i class="fa fa-book"></i> Node.js</a></li>
+                                        </ul>
+                                    </ul>
+                                </section> <!--end .accordion-section-content-->
+                            </section> <!--end .accordion-section-->
+                        </section> <!--end .accordion-->
                     </section>
                     <section id="tabs-2">
-                        <p>Dessa sektioner kommer att fyllas på under tiden som kurserna utformas.</p>
+                        <p>Grä: Dessa sektioner kommer att fyllas på under tiden som kurserna utformas.</p>
                     </section>
                     <section id="tabs-3">
-                        <p>Dessa sektioner kommer att fyllas på under tiden som kurserna utformas.</p>
+                        <p>Dao: Dessa sektioner kommer att fyllas på under tiden som kurserna utformas.</p>
                     </section>
                     <section id="tabs-4">
-                        <p>Dessa sektioner kommer att fyllas på under tiden som kurserna utformas.</p>
+                        <p>Tek: Dessa sektioner kommer att fyllas på under tiden som kurserna utformas.</p>
                     </section>
                 </section>
             </main>
@@ -77,5 +116,6 @@
         
         <!-- Own scripts -->
         <script type="text/javascript" src="../assets/js/script.js"></script>
+        <script type="text/javascript" src="../assets/js/accordion.js"></script>
     </body>
 </html>
